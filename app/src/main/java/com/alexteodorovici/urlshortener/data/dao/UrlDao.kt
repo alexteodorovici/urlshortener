@@ -1,11 +1,13 @@
 package com.alexteodorovici.urlshortener.data.dao
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.alexteodorovici.urlshortener.data.model.UrlEntity
 import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface UrlDao {
 
     @Insert(onConflict= OnConflictStrategy.REPLACE)
